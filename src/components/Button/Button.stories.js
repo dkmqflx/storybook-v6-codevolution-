@@ -2,7 +2,9 @@ import React from 'react';
 import Button from './Button';
 
 export default {
-  title: 'Button', // mandatory, uniqu within your entire project
+  // title: 'form/control/Button',// nesting
+  title: 'form/Button',
+
   component: Button,
 };
 
