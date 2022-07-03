@@ -3,7 +3,7 @@ import Button from './Button';
 
 export default {
   // title: 'form/control/Button',// nesting
-  title: 'form/Button',
+  title: 'Form/Button',
 
   component: Button,
 };
