@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
 import { action, actions } from '@storybook/addon-actions';
+import { text, boolean } from '@storybook/addon-knobs';
 
 export default {
   title: 'Chakra/Button',
@@ -22,3 +23,14 @@ export const Log = () => (
     Log
   </Button>
 );
+
+export const Knobs = () => (
+  <Button colorScheme="purple" disabled={boolean('Disabled', false)}>
+    {text('Label', 'Button Label')}
+  </Button>
+);
+
+/**
+ * knobs allow you to edit props dynamically
+ *
+ */
