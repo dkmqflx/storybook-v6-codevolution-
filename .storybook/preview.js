@@ -1,3 +1,9 @@
+import { addDecorator } from '@storybook/react';
+import Center from '../src/components/Center/Center';
+
+addDecorator((story) => <Center>{story()}</Center>);
+// global decorateor를 통해서, input 컴포넌트까지 적용시킬 수 있다
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
