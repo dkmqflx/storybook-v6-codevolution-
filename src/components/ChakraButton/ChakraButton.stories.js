@@ -19,7 +19,7 @@ export const Secondary = () => (
   </Button>
 );
 export const Log = () => (
-  <Button colorScheme="blue" onClick={() => console.log('Button clicked')}>
+  <Button colorScheme="blue" onClick={() => console.log('Button clicked', process.env.STORYBOOK_THEME)}>
     Log
   </Button>
 );
