@@ -17,7 +17,8 @@ export const Secondary = () => (
     Secondary
   </Button>
 );
-/**
- * add on as the name implement extra features for story books
- * to make them more useful
- */
+export const Log = () => (
+  <Button colorScheme="blue" onClick={() => console.log('Button clicked')}>
+    Log
+  </Button>
+);

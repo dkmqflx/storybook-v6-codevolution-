@@ -1,6 +1,7 @@
 import { addDecorator } from '@storybook/react';
 import Center from '../src/components/Center/Center';
 import { ThemeProvider, theme, CSSReset, Box } from '@chakra-ui/react';
+import { withConsole } from '@storybook/addon-console';
 
 addDecorator((story) => <Center>{story()}</Center>);
 // global decorateor를 통해서, input 컴포넌트까지 적용시킬 수 있다
@@ -15,6 +16,10 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+// to know where this console.log comes from
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
