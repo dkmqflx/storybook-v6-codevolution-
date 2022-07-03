@@ -4,8 +4,25 @@ import { Button } from '@chakra-ui/react';
 export default {
   title: 'Chakra/Button',
   component: Button,
+  argTypes: {
+    onClick: { action: 'clicked' },
+  },
 };
 
-export const Primary = () => <Button colorScheme="red">Red</Button>;
+const Template = (args) => <Button {...args} />;
 
-export const Secondary = () => <Button colorScheme="green">Secondary</Button>;
+export const Success = Template.bind({});
+Success.args = {
+  variantColor: 'green',
+  children: 'Success',
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  variantColor: 'red',
+  children: 'Danger',
+};
+/**
+ * add on as the name implement extra features for story books
+ * to make them more useful
+ */
