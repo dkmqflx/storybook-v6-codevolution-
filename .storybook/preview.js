@@ -5,13 +5,16 @@ import { ThemeProvider, theme, CSSReset, Box } from '@chakra-ui/react';
 addDecorator((story) => <Center>{story()}</Center>);
 // global decorateor를 통해서, input 컴포넌트까지 적용시킬 수 있다
 
-addDecorator((story) => (
-  <ThemeProvider theme={theme}>
-    <CSSReset />
-    <Box m="4">{story()}</Box>
-  </ThemeProvider>
-));
-
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Box m="4">
+        <Story />
+      </Box>
+    </ThemeProvider>
+  ),
+];
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
