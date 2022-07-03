@@ -31,6 +31,6 @@ export const Knobs = () => (
 );
 
 /**
- * knobs allow you to edit props dynamically
- *
+ * with this add on, you can test compliance of your stories
+ * with web accessibility standards
  */
