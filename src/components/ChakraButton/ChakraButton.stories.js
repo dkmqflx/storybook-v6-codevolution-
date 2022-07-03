@@ -1,27 +1,22 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
+import { action, actions } from '@storybook/addon-actions';
 
 export default {
   title: 'Chakra/Button',
   component: Button,
-  argTypes: {
-    onClick: { action: 'clicked' },
-  },
 };
 
-const Template = (args) => <Button {...args} />;
-
-export const Success = Template.bind({});
-Success.args = {
-  variantColor: 'green',
-  children: 'Success',
-};
-
-export const Danger = Template.bind({});
-Danger.args = {
-  variantColor: 'red',
-  children: 'Danger',
-};
+export const Primary = () => (
+  <Button onClick={action('Click Handler')} colorScheme="green">
+    Primary
+  </Button>
+);
+export const Secondary = () => (
+  <Button {...actions('onClick', 'onMouseOver')} colorScheme="red">
+    Secondary
+  </Button>
+);
 /**
  * add on as the name implement extra features for story books
  * to make them more useful
